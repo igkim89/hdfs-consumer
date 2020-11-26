@@ -1,0 +1,27 @@
+spring:
+  profiles:
+    active: dev
+    include: hadoop
+  datasource:
+    url: jdbc:postgresql://dsc04.en-core.com:5432/bigdata
+    username: igkim
+    password: P@ssword
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+#logging:
+#  config: classpath:logback-${spring.profiles}.xml
+
+---
+
+spring:
+  profiles: prd
+
+---
+
+spring:
+  profiles: dev
